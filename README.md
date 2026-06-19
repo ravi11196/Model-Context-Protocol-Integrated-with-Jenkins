@@ -71,35 +71,35 @@ Stores environment-specific configurations:
 
 **************************************************Installation & Setup**************************************************
 
-**Clone Repository**
+**- Clone Repository**
 
 'git clone https://github.com/ravi11196/Model-Context-Protocol-Integrated-with-Jenkins.git'
 
-**Navigate to Directory**
+**- Navigate to Directory**
 
 'cd Model-Context-Protocol-Integrated-with-Jenkins'
 
-**Build Docker Image**
+**- Build Docker Image**
 
 'docker build --no-cache -t jenkins-mcp-proxy .'
 
-**Start Services**
+**- Start Services**
 
 'docker compose up -d'
 *********************************************Verification & Health Check*************************************************
 
-**Check Running Containers**
+**- Check Running Containers**
 
 'docker ps'
 
-**View Logs**
+**- View Logs**
 
 'docker compose logs -f'
 or
 
 'docker logs <container_name>'
 
-**Health Validation**
+**- Health Validation**
 
 Verify the following in logs:
  - MCP proxy server started successfully
