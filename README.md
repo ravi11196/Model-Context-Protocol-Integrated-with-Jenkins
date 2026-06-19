@@ -85,8 +85,9 @@ Ensure the following tools are installed:
 
   **- Start Services**
 
-  'docker compose up -d'
-*********************************************Verification & Health Check*************************************************
+  'docker compose up -d
+  
+********************************************Verification & Health Check********************************************
 
   **- Check Running Containers**
 
