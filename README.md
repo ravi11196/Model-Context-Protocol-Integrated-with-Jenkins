@@ -1,6 +1,7 @@
 ******************************Model Context Protocol Integrated with Jenkins******************************
 
 **Overview**
+
 This project demonstrates how to integrate Model Context Protocol (MCP) with Jenkins to enable intelligent, automated interaction with Jenkins pipelines.
 The MCP proxy acts as a middleware layer that:
   - Exposes Jenkins capabilities via structured APIs
@@ -15,6 +16,7 @@ By integrating MCP:
     - External systems can integrate seamlessly
 
 **Prerequisites**
+
 Ensure the following tools are installed:
 - Python3 3.11.15
 - Docker
@@ -23,6 +25,7 @@ Ensure the following tools are installed:
 
 **************************************************Project Structure***************************************************
 **functions.py**
+
 Core logic layer for Jenkins interaction
 Handles:
 - Job triggering
@@ -31,29 +34,35 @@ Handles:
 - Acts as a service layer between proxy and Jenkins
 
 **proxy_mcp.py**
+
 Main entry point of MCP proxy
 - Handles incoming requests
 - Routes calls to functions.py
 - Formats MCP-compatible responses
 
 **remote-test.py**
+
 Test script to validate MCP endpoints
 - Simulates remote API calls
 - Useful for debugging
 
 **requirements.txt**
+
 Lists Python dependencies
 - Used for container build and local setup
 
 **Dockerfile**
+
 Builds container image
 - Installs dependencies and runtime environment
 
 **docker-compose.yaml**
+
 Defines services and configurations
 - Manages container orchestration
 
 **.env**
+
 Stores environment-specific configurations:
 - Jenkins URL
 - Credentials / API tokens
@@ -88,6 +97,7 @@ or
 'docker logs <container_name>'
 
 **Health Validation**
+
 Verify the following in logs:
  - MCP proxy server started successfully
  - Jenkins connection established
@@ -95,7 +105,7 @@ Verify the following in logs:
  - Health check endpoint responding (if configured)
 
 **************************************************Testing**************************************************
-Run the test script:
+**Run the test script:**
 
 'python3 remote-test.py'
 
@@ -105,6 +115,7 @@ This will:
  - Confirm Jenkins integration
 
 **Use Cases**
+
  - AI-powered DevOps automation
  - Remote Jenkins orchestration
  - Build monitoring & reporting
