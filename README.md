@@ -1,4 +1,4 @@
-******************************Model Context Protocol Integrated with Jenkins****************************************
+******************************Model Context Protocol Integrated with Jenkins******************************
 
 **Overview**
 This project demonstrates how to integrate Model Context Protocol (MCP) with Jenkins to enable intelligent, automated interaction with Jenkins pipelines.
@@ -61,23 +61,30 @@ Stores environment-specific configurations:
 
 **************************************************Installation & Setup**************************************************
 **Clone Repository**
+
 'git clone https://github.com/ravi11196/Model-Context-Protocol-Integrated-with-Jenkins.git'
 
 **Navigate to Directory**
+
 'cd Model-Context-Protocol-Integrated-with-Jenkins'
 
 **Build Docker Image**
+
 'docker build --no-cache -t jenkins-mcp-proxy .'
 
 **Start Services**
+
 'docker compose up -d'
 *********************************************Verification & Health Check*************************************************
 **Check Running Containers**
+
 'docker ps'
 
 **View Logs**
+
 'docker compose logs -f'
 or
+
 'docker logs <container_name>'
 
 **Health Validation**
@@ -89,6 +96,7 @@ Verify the following in logs:
 
 **************************************************Testing**************************************************
 Run the test script:
+
 'python3 remote-test.py'
 
 This will:
