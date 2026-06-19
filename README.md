@@ -15,7 +15,7 @@ By integrating MCP:
     - Build insights (status/logs) become easily accessible
     - External systems can integrate seamlessly
 
-**Prerequisites**
+**Prerequisites:-**
 
 Ensure the following tools are installed:
 - Python3 3.11.15
@@ -24,6 +24,7 @@ Ensure the following tools are installed:
 - Git
 
 **************************************************Project Structure***************************************************
+
 **functions.py**
 
 Core logic layer for Jenkins interaction
@@ -69,6 +70,7 @@ Stores environment-specific configurations:
 - Other runtime configs
 
 **************************************************Installation & Setup**************************************************
+
 **Clone Repository**
 
 'git clone https://github.com/ravi11196/Model-Context-Protocol-Integrated-with-Jenkins.git'
@@ -85,6 +87,7 @@ Stores environment-specific configurations:
 
 'docker compose up -d'
 *********************************************Verification & Health Check*************************************************
+
 **Check Running Containers**
 
 'docker ps'
@@ -105,6 +108,7 @@ Verify the following in logs:
  - Health check endpoint responding (if configured)
 
 **************************************************Testing**************************************************
+
 **Run the test script:**
 
 'python3 remote-test.py'
