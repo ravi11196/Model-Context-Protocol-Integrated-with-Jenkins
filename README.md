@@ -23,9 +23,9 @@ Ensure the following tools are installed:
 - Docker Compose
 - Git
 
-**************************************************Project Structure***************************************************
+**************************************************Project Structure**************************************************
 
-**functions.py**
+**1) functions.py**
 
 Core logic layer for Jenkins interaction
 Handles:
@@ -34,35 +34,35 @@ Handles:
 - Logs fetching
 - Acts as a service layer between proxy and Jenkins
 
-**proxy_mcp.py**
+**2) proxy_mcp.py**
 
 Main entry point of MCP proxy
 - Handles incoming requests
 - Routes calls to functions.py
 - Formats MCP-compatible responses
 
-**remote-test.py**
+**3) remote-test.py**
 
 Test script to validate MCP endpoints
 - Simulates remote API calls
 - Useful for debugging
 
-**requirements.txt**
+**4) requirements.txt**
 
 Lists Python dependencies
 - Used for container build and local setup
 
-**Dockerfile**
+**5) Dockerfile**
 
 Builds container image
 - Installs dependencies and runtime environment
 
-**docker-compose.yaml**
+**6) docker-compose.yaml**
 
 Defines services and configurations
 - Manages container orchestration
 
-**.env**
+**7) .env**
 
 Stores environment-specific configurations:
 - Jenkins URL
