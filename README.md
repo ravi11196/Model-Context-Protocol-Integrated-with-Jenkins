@@ -25,105 +25,105 @@ Ensure the following tools are installed:
 
 **************************************************Project Structure**************************************************
 
-**1) functions.py**
+  **1) functions.py**
 
-Core logic layer for Jenkins interaction
-Handles:
-- Job triggering
-- Build status retrieval
-- Logs fetching
-- Acts as a service layer between proxy and Jenkins
+  Core logic layer for Jenkins interaction
+  Handles:
+  - Job triggering
+  - Build status retrieval
+  - Logs fetching
+  - Acts as a service layer between proxy and Jenkins
 
-**2) proxy_mcp.py**
+  **2) proxy_mcp.py**
 
-Main entry point of MCP proxy
-- Handles incoming requests
-- Routes calls to functions.py
-- Formats MCP-compatible responses
+  Main entry point of MCP proxy
+  - Handles incoming requests
+  - Routes calls to functions.py
+  - Formats MCP-compatible responses
 
-**3) remote-test.py**
+  **3) remote-test.py**
 
-Test script to validate MCP endpoints
-- Simulates remote API calls
-- Useful for debugging
+  Test script to validate MCP endpoints
+  - Simulates remote API calls
+  - Useful for debugging
 
-**4) requirements.txt**
+  **4) requirements.txt**
 
-Lists Python dependencies
-- Used for container build and local setup
+  Lists Python dependencies
+  - Used for container build and local setup
 
-**5) Dockerfile**
+  **5) Dockerfile**
 
-Builds container image
-- Installs dependencies and runtime environment
+  Builds container image
+  - Installs dependencies and runtime environment
 
-**6) docker-compose.yaml**
+  **6) docker-compose.yaml**
 
-Defines services and configurations
-- Manages container orchestration
+  Defines services and configurations
+  - Manages container orchestration
 
-**7) .env**
+  **7) .env**
 
-Stores environment-specific configurations:
-- Jenkins URL
-- Credentials / API tokens
-- Other runtime configs
+  Stores environment-specific configurations:
+  - Jenkins URL
+  - Credentials / API tokens
+  -  Other runtime configs
 
 **************************************************Installation & Setup**************************************************
 
-**- Clone Repository**
+  **- Clone Repository**
 
-'git clone https://github.com/ravi11196/Model-Context-Protocol-Integrated-with-Jenkins.git'
+  'git clone https://github.com/ravi11196/Model-Context-Protocol-Integrated-with-Jenkins.git'
 
-**- Navigate to Directory**
+  **- Navigate to Directory**
 
-'cd Model-Context-Protocol-Integrated-with-Jenkins'
+  'cd Model-Context-Protocol-Integrated-with-Jenkins'
 
-**- Build Docker Image**
+  **- Build Docker Image**
 
-'docker build --no-cache -t jenkins-mcp-proxy .'
+  'docker build --no-cache -t jenkins-mcp-proxy .'
 
-**- Start Services**
+  **- Start Services**
 
-'docker compose up -d'
+  'docker compose up -d'
 *********************************************Verification & Health Check*************************************************
 
-**- Check Running Containers**
+  **- Check Running Containers**
 
-'docker ps'
+  'docker ps'
 
-**- View Logs**
+  **- View Logs**
 
-'docker compose logs -f'
-or
+  'docker compose logs -f'
+  or
 
-'docker logs <container_name>'
+  'docker logs <container_name>'
 
-**- Health Validation**
+  **- Health Validation**
 
-Verify the following in logs:
- - MCP proxy server started successfully
- - Jenkins connection established
- - No authentication errors
- - Health check endpoint responding (if configured)
+  Verify the following in logs:
+   - MCP proxy server started successfully
+   - Jenkins connection established
+   - No authentication errors
+   - Health check endpoint responding (if configured)
 
 **************************************************Testing**************************************************
 
-**Run the test script:**
+  **Run the test script:**
 
-'python3 remote-test.py'
+  'python3 remote-test.py'
 
-This will:
- - Send test requests to MCP proxy
- - Validate responses
- - Confirm Jenkins integration
+  This will:
+   - Send test requests to MCP proxy
+   - Validate responses
+   - Confirm Jenkins integration
 
-**Use Cases**
+  **Use Cases**
 
- - AI-powered DevOps automation
- - Remote Jenkins orchestration
- - Build monitoring & reporting
- - Integration with LLM-based tools
+   - AI-powered DevOps automation
+   - Remote Jenkins orchestration
+   - Build monitoring & reporting
+   - Integration with LLM-based tools
 
 
 
